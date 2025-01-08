@@ -1,0 +1,165 @@
+<c!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: black;
+            background-color: lightgreen;
+        }
+        .container {
+            display: flex;
+            margin-top: 10px;
+            color: #0078ff;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+        }
+         h1, h2, h3 {
+            margin: 10px 0;
+         }
+         a {
+            text-decoration: none;
+            color: blue;
+         }
+         header {
+            text-align: center;
+            color: white;
+            background: linear-gradient(to right, #0078ff, #00c6ff, red, yellow, green);
+            padding: 20px 0;
+         }
+         .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+         }
+         .nav-links {
+            display: flex;
+            list-style: none;
+         }
+         .nav-links li {
+            margin-left: 15px;
+         } 
+         .hero-content {
+            margin: 50px auto;
+         }
+         .cta-button {
+            padding: 10px 20px;
+            background: white;
+            color: #0078ff;
+            border-radius: 5px;
+         }
+         .about-section, .projects-section, .contact-section {
+            padding: 40px 20px;
+            text-align: center;
+         }
+         .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+         }
+         .project {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+         }
+          form {
+            max-width: 500px;
+            margin: 0 auto;
+          }
+          form input, form trxtarea, form button {
+            display:  block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+          }
+          footer {
+            text-align: center;
+            padding: 10px;
+            background: black;
+            color: red;
+          }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="c:\Users\PC\Pictures\profile-icon.PNG" alt="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+             <h1>Hi, I'm Timzy</h1>
+             <p>A Web Developer & Designer</p>
+             <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </header>
+
+    <main class="container">
+       <section id="about" class="about-section">
+         <h2>About Me</h2>
+          <p>I am a passionate web developer with experience in creating responsive and user-friendly websites. I love designing clean and modern interfaces.</p>
+      </section>
+
+      <section id="Projects" class="Projects-section">
+         <h2>Projects</h2>
+         <div class="Projects-grid">
+            <div class="Projects">
+                <h3>Front-End Developer</h3>
+                <p>Focuses on the part of a website that users interact with.</p>
+            </div>
+            <div class="Projects">
+                <h3>Back-End Developer</h3>
+                <p>Focuses on the server side of web applications.</p>
+            </div>
+            <div class="Projects">
+                <h3>Web Designer</h3>
+                <p>Focuses more on the visual aspects of a website.</p>
+            </div>
+          </div>
+      </section>
+    </main>
+
+    <section id="contact" class="Contact-section">
+        <h2>Contact Me</h2>
+        <form action="#">
+            <input type="text" placeholder="your name" required>
+            <input type="email" placeholder="your email" required>
+            <textarea placeholder="your message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <script src="script.js">
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(e.target.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
+    <footer>
+        <h3>follow us on</h3>
+        <a href="https.//www.instagram.com" target="_blank">Instagram</a>
+        <p>@timzy_youngest.75</p>
+        <p>&copy; 2024 Big_Timzy Portfolio</p>
+    </footer>
+
+</body>
+</html>
